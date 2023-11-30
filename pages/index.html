@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/github_logo.png" type="image/x-icon">
+    <title>Github User Finder</title>
+</head>
+<body class="light-Theme" id="body">
+    <main id="main">
+        <div class="wrapper">
+            <input type="checkbox" id="switch">
+            <label for="switch" class="switch-label">
+                <div class="toggle"></div>
+            </label>
+        </div>
+        <h1 class="appHeader">Github User Finder</h1>
+        <div class="searchArea">
+            <form id="githubForm">
+                <input type="text" name="usernameInput" id="usernameInput" placeholder="Enter a username"  class="light-Theme">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="resultArea">
+            <div class="profile">
+                <a href="#" target="">
+                    <img src="/images/avatar.png" alt="avatar" id="avatar">
+                </a>
+                <h2 id="fullname">Full Name</h2>
+                <h3 id="username">username</h3>
+                <h4 id="bio">Biography</h4>
+                <hr><br>
+                <h5><i class="fa-solid fa-user fa-lg"></i> <span id="followers">0</span> Followers • <span id="followings">0</span> Following</h5>
+                <br><hr><br>
+                <h5><i class="fa-solid fa-location-dot fa-lg"></i> <span id="location">Location</span></h5>
+                <br><hr><br>
+                <h5><i class="fa-solid fa-briefcase fa-lg"></i> <span id="publicRepos">0</span></h5>
+            </div>
+        </div>
+        <div class="resultRepos">
+            <h3>Repositories</h3>
+            <div class="repository">
+                <ul id="repository-list">
+                    <li><a href="#" target="">Example Repository</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="/javascripts/github.js"></script>
+    <script src="/javascripts/ui.js"></script>
+    <script src="/javascripts/app.js"></script>
+</body>
+</html>
