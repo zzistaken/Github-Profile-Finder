@@ -99,6 +99,16 @@ button:hover {
     margin-bottom: 1rem;
     border-radius: 0.5rem;
 }
+#repoLang {
+    width: auto;
+    height: 24px;
+    padding: 0 0.5rem;
+    background-color: #ffffff00;
+    color: #000000;
+    border: none;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+}
 /* THEMES */
 .light-Theme {
     background-color: #fafbfc;

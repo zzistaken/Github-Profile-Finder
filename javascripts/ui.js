@@ -33,8 +33,56 @@ class UI {
     showUserRepos = repos => {
         this.repoList.innerHTML = "";
         repos.forEach( repo => {
+            let bgcolor = "#000";
+        let textcolor = "#fff";
+
+        if (repo.language) {
+            const langLowerCase = repo.language.toLowerCase();
+            switch (langLowerCase) {
+                case "html":
+                    bgcolor = "#e34c26";
+                    break;
+                case "javascript":
+                    bgcolor = "#f0db4f";
+                    textcolor = "#323330";
+                    break;
+                case "css":
+                    bgcolor = "#2965f1";
+                    break;
+                case "python":
+                    bgcolor = "#306998";
+                    break;
+                case "java":
+                    bgcolor = "#5382a1";
+                    break;
+                case "c++":
+                    bgcolor = "#00599c";
+                    textcolor = "#fff";
+                    break;
+                case "ruby":
+                    bgcolor = "#cc342d";
+                    break;
+                case "swift":
+                    bgcolor = "#f05138";
+                    break;
+                case "typescript":
+                    bgcolor = "#007acc";
+                    break;
+                case "c#":
+                    bgcolor = "#178600";
+                    break;
+                case "kotlin":
+                    bgcolor = "#7f52ff";
+                    break;
+                case "vue":
+                    bgcolor = "#41b883";
+                    break;
+                default:
+                    bgcolor = "#000";
+                    textcolor = "#fff";
+            }}
             this.repoList.innerHTML += `
-            <li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>
+            <li><a href="${repo.html_url}" target="_blank">${repo.name}</a>  <button id="repoLang" style="background-color: ${bgcolor}; color: ${textcolor}">${repo.language}</button></li>
             `
         });
     }
